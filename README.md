@@ -12,3 +12,10 @@ Téléchargerr de l'image officielle 'nginx'.
 Lancer du conteneur en arrière-plan avec mappage de port : 'docker run -d -p 8080:80 --name mon_nginx nginx'.
 Accès réussi à la page d'accueil Nginx via 'http://localhost:8080', et la page affiche 'Welcome to nginx!'.
 Après le test, arrêter du conteneur par 'docker stop' et supprimer par 'docker rm'
+
+## Exercice 3 : Déploiement d'une application Python Flask
+Créer 2 fichier : 
+---- app.py : : Code source de l'application web
+---- Dockerfile : Instructions de construction de l'image.
+Lancer la commande 'docker build -t mon-app-flask .' pour construire l'image, et la commande 'docker run -d -p 5000:5000 --name container_flask mon-app-flask' pour le lancement du conteneur.
+Le résultat est que l'application est accessible sur 'http://localhost:5000' et affiche le message "Hello, World!".
