@@ -19,3 +19,11 @@ Créer 2 fichier :
 ---- Dockerfile : Instructions de construction de l'image.
 Lancer la commande 'docker build -t mon-app-flask .' pour construire l'image, et la commande 'docker run -d -p 5000:5000 --name container_flask mon-app-flask' pour le lancement du conteneur.
 Le résultat est que l'application est accessible sur 'http://localhost:5000' et affiche le message "Hello, World!".
+
+## Exercice 4 : Utilisation de docker compose 
+Créer 3 fichiers : 
+---- docker-compose.yml : Orchestration des services my-web-app et mongo_service
+---- app.py : >Code modifié pour se connecter à mongodb://mongo_service:27017/
+---- Dockerfile : Ajout de la dépendance pymongo.
+Lancer la commande docker compose up --build : Construction et lancement simultané des conteneurs
+Les résultats sont que L'application est accessible sur 'http://localhost:5000' et La page affiche "Succès : Flask s'a connecté à la MongoDB!", confirmant la connexion à la base de données
